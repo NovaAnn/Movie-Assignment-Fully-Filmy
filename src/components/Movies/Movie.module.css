@@ -1,0 +1,61 @@
+.meal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+  align-items: center;
+}
+.overview {
+  width: 80%;
+}
+.meal h3 {
+  margin: 0 0 0.25rem 0;
+}
+.meal button {
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+}
+.description {
+  font-style: italic;
+}
+
+.price {
+  margin-top: 0.25rem;
+  font-weight: bold;
+  color: rgb(9, 9, 172);
+  font-size: 1rem;
+}
+.add-style {
+  color: black;
+  font-size: 1.2rem;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .meal {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.buttonFlex {
+  max-width: 10rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.buttonFlex button {
+  background-color: hsl(47, 90%, 53%);
+  padding: 0.8rem 0.5rem;
+  margin: 0.5rem 0;
+  color: black;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}

@@ -1,0 +1,163 @@
+.header {
+  width: 100%;
+  height: 5rem;
+  /* background-color: hsl(47, 95%, 61%); */
+  color: hsl(47, 95%, 61%);
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 7%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  font-family: Mulish, sans-serif;
+  z-index: 10;
+  box-sizing: border-box;
+  font-size: 0.8rem;
+  border-bottom: 2px solid hsl(47, 95%, 61%);
+}
+.header nav {
+  display: none;
+}
+@media (min-width: 768px) {
+  .header nav {
+    display: block;
+  }
+}
+.header nav span {
+  cursor: pointer;
+  padding: 0.5rem 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 10px;
+  border: 0.8px solid rgb(63, 63, 63);
+  margin: 0 0.5rem;
+}
+.slide {
+  width: 100%;
+  background-color: white;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.slideshow {
+  width: 300%;
+
+  display: flex;
+  justify-content: space-evenly;
+  transition: ease 1000ms;
+  overflow: hidden;
+  background-color: black;
+}
+.slideshowDot {
+  display: inline;
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+
+  cursor: pointer;
+  margin: 0 0.1rem;
+  background-color: #5a5a5a;
+}
+.slideshowDot .active {
+  background-color: #6a0dad;
+}
+.indSlide {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.slide h3 {
+  text-align: left;
+  color: #4267b2;
+}
+
+.slide img {
+  height: 100%;
+  max-height: 25rem;
+  max-width: 100%;
+  object-fit: contain;
+}
+.badge {
+  display: inline-block;
+  background-color: rgb(63, 63, 63);
+  padding: 0.1rem 0.4rem !important;
+  border-radius: 20px;
+  margin-left: 0.3rem !important;
+  font-weight: bold;
+  font-size: 1rem !important;
+  position: relative;
+  color: hsl(47, 95%, 61%);
+}
+.bump {
+  animation: bump1 600ms ease-out;
+}
+
+@keyframes bump1 {
+  0% {
+    transform: scale(1.2);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.ulClass {
+  list-style: none;
+  height: 5rem;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  font-weight: 700;
+}
+.ulClass li ul {
+  padding: 0;
+  list-style: none;
+  background-color: white;
+  position: absolute;
+
+  top: 100%;
+  right: 55%;
+  animation: sliding 500ms ease-in forwards;
+  transform: translateX(50%);
+  z-index: 100;
+}
+.ulClass li ul li {
+  padding: 0.5rem 0.7rem;
+  white-space: wrap;
+  border-bottom: 1px solid grey;
+  font-weight: bold;
+  color: black;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  .ulClass {
+    display: none;
+  }
+}
+@keyframes sliding {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+    transform: translateX(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    transform: translateX(50%);
+  }
+}
